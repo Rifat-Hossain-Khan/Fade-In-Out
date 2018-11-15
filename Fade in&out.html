@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript Practice</title>
+	<link rel="stylesheet" type="text/css" href="fade.css">
+</head>	
+
+<body>
+	<section class="content">
+		<div class="header">
+			<h2>JavaScript Practice Field</h2>
+		</div>
+		<div class="maincontent">			
+			<button onclick="fadeOut()">Start</button>
+			<button onclick="clearTimeout(a); clearTimeout(b); clearTimeout(c);clearTimeout(d)">Stop</button><br/>
+			<img src="feminiva.png" id="my image" alt="feminiva" height="500" width="760"/>
+			<script>
+				
+				var element= document.getElementById("my image");
+				var duration= 1000;
+				var hidetime= 1000;
+				var showtime= 1000;
+
+				var setOpacity= function(value){
+
+					element.style.opacity=value;
+
+				}
+
+				var fadeOut=function(){
+					for(i=0; i<=1; i+=0.01)
+					{
+						c=setTimeout("setOpacity("+(1-i)+")",i*duration);
+					}
+				   		d=setTimeout("fadeIn()",(hidetime+duration));
+				}
+				var fadeIn=function(){
+					for(i=0; i<=1; i+=0.01)
+					{
+							a=setTimeout("setOpacity("+i+")",i*duration);
+					}
+							b=setTimeout("fadeOut()",(showtime+duration));
+				}
+			
+		
+
+			</script>
+
+		</div>
+		
+		<div class="footer">
+			<h2>Happy Practice..!!</h2>
+		</div>	
+	</section>	
+</body>	
+</html>
